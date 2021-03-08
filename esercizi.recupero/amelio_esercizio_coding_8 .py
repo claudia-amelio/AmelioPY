@@ -1,0 +1,5 @@
+frutta=("banana","mela","pera","arancia")
+print(frutta)
+x=input(str("inserisci un frutto tra i precedenti:"))
+index = frutta.index(x)
+print("The index of",x,"is", index)
