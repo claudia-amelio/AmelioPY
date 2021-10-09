@@ -31,12 +31,19 @@ class calcComb:
         fact = 1
         for num in range(2, n + 1):
             fact *= num
-        print(fact)
+        return fact
 
     def disposizioni(self,k,):
         n=len(self.__stringa)
         if k<n:
-            x=factorial(k)
+            while k>1:
+                    fact = 1
+                    for num in range(2, n + 1,):
+                         fact *= num
+                    k=k-1
+            return fact
+
+
                 
         else:
             print("k non può essere maggiore di n")
@@ -52,10 +59,10 @@ class calcComb:
 
 GalileoGalilei = calcComb("stringaDiRiferimento") #è un oggetto che si trova in questa classe di oggetti)
 
-GalileoGalilei.setStringa("lolfddfll")
+GalileoGalilei.setStringa("lolf55")
 print(GalileoGalilei.permutazioni(5)) 
 #print(GalileoGalilei.eliminazioniRipetizioni())
-print (GalileoGalilei.disposizioni(4))
+print (GalileoGalilei.disposizioni(3))
 
 
 
