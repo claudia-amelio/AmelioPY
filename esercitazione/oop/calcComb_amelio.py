@@ -38,11 +38,9 @@ class calcComb:
         k=k
         if k<=n:
             while k>1:
-                    k-=1
                     fact = 1
-                    for num in range(2, n + 1,):
-                         fact *= num
-                    
+                    for num in range(2, k, n + 1,):
+                            fact *= num
                     return fact
 
         else:
@@ -60,7 +58,7 @@ GalileoGalilei.setStringa("lolfh")
 
 
 print("il numero di disposizioni con ripetizioni è:",GalileoGalilei.disposizioniRipetizioni(5)) 
-print ("il numero di disposizioni semplici è:",GalileoGalilei.disposizioni(2))
+print ("il numero di disposizioni semplici è:",GalileoGalilei.disposizioni(6))
 print ("il risultato della permutazione è:",GalileoGalilei.permutazioniSemplici())
 
 

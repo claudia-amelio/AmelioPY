@@ -6,4 +6,4 @@ def factorial(n):
 k=-5
 while k<0:
     print("a")
-    k+=k
+    k+=1
