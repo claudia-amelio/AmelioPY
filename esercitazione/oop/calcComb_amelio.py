@@ -24,7 +24,7 @@ class calcComb:
         self.__stringa = str
         self.stringalist = list(str)
 
-    def permutazioni(self, k):      #metodo che fa pare della calcomb
+    def disposizioniRipetizioni(self, k):      #metodo che fa pare della calcomb
         return len(self.__stringa)**k #k è il valore dei posti della combinazione
 
     def factorial(n):
@@ -35,7 +35,7 @@ class calcComb:
 
     def disposizioni(self,k,):
         n=len(self.__stringa)
-        if k<n:
+        if k<=n:
             while k>1:
                     fact = 1
                     for num in range(2, n + 1,):
@@ -43,27 +43,29 @@ class calcComb:
                     k=k-1
             return fact
 
-
-                
         else:
             print("k non può essere maggiore di n")
             return("errore")
 
-   
-    
-    #def eliminazioniRipetizioni(self):
-        #for lettera in GalileoGalilei.getStringalist:
-          #  str.count(lettera)
-          #  i=+lettera
-#impostando le variabili, che diventano degli oggetto
+    def permutazioniSemplici(self):
+                n=len(self.__stringa)
+        
+                while n>1:
+                        fact = 1
+                        for num in range(2, n + 1,):
+                            fact *= num
+                        n=n-1
+                return fact
+            
 
 GalileoGalilei = calcComb("stringaDiRiferimento") #è un oggetto che si trova in questa classe di oggetti)
 
-GalileoGalilei.setStringa("lolf55")
-print(GalileoGalilei.permutazioni(5)) 
-#print(GalileoGalilei.eliminazioniRipetizioni())
-print (GalileoGalilei.disposizioni(3))
+GalileoGalilei.setStringa("lolf55gu")
 
+
+print("il numero di disposizioni con ripetizioni è:",GalileoGalilei.disposizioniRipetizioni(5)) 
+print ("il numero di disposizioni semplici è:",GalileoGalilei.disposizioni(3))
+print ("il risultato della permutazione è:",GalileoGalilei.permutazioniSemplici())
 
 
 
