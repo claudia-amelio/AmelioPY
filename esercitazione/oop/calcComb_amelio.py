@@ -49,22 +49,16 @@ class calcComb:
 
     def permutazioniSemplici(self):
                 n=len(self.__stringa)
-        
-                while n>1:
-                        fact = 1
-                        for num in range(2, n + 1,):
-                            fact *= num
-                        n=n-1
-                return fact
+                return factorial(n)
             
 
 GalileoGalilei = calcComb("stringaDiRiferimento") #è un oggetto che si trova in questa classe di oggetti)
 
-GalileoGalilei.setStringa("lolf55gu")
+GalileoGalilei.setStringa("lolfh")
 
 
 print("il numero di disposizioni con ripetizioni è:",GalileoGalilei.disposizioniRipetizioni(5)) 
-print ("il numero di disposizioni semplici è:",GalileoGalilei.disposizioni(3))
+print ("il numero di disposizioni semplici è:",GalileoGalilei.disposizioni(5))
 print ("il risultato della permutazione è:",GalileoGalilei.permutazioniSemplici())
 
 
