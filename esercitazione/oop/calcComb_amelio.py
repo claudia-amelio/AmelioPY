@@ -35,13 +35,15 @@ class calcComb:
 
     def disposizioni(self,k,):
         n=len(self.__stringa)
+        k=k
         if k<=n:
             while k>1:
+                    k-=1
                     fact = 1
                     for num in range(2, n + 1,):
                          fact *= num
-                    k=k-1
-            return fact
+                    
+                    return fact
 
         else:
             print("k non può essere maggiore di n")
@@ -58,7 +60,7 @@ GalileoGalilei.setStringa("lolfh")
 
 
 print("il numero di disposizioni con ripetizioni è:",GalileoGalilei.disposizioniRipetizioni(5)) 
-print ("il numero di disposizioni semplici è:",GalileoGalilei.disposizioni(5))
+print ("il numero di disposizioni semplici è:",GalileoGalilei.disposizioni(2))
 print ("il risultato della permutazione è:",GalileoGalilei.permutazioniSemplici())
 
 
