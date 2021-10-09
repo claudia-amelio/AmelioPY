@@ -22,11 +22,15 @@ class calcComb:
         return len(self.__stringa)**k #k è il valore dei posti della combinazione
 
     def disposizioni(self,k,):
-        while k>0:
-            y  = len(self.__stringa)*k
-            k=-1
-            c=+y
-        return c
+        d=len(self.__stringa)
+        if k<d:
+            while k>1:
+                y=(d-k)
+                k=k-1
+                
+        else:
+            print("k non può essere maggiore di n")
+            return("errore")
 
 
     
@@ -38,7 +42,7 @@ class calcComb:
 
 GalileoGalilei = calcComb("stringaDiRiferimento") #è un oggetto che si trova in questa classe di oggetti)
 
-GalileoGalilei.setStringa("da")
+GalileoGalilei.setStringa("lolfddfll")
 print(GalileoGalilei.permutazioni(5)) 
 #print(GalileoGalilei.eliminazioniRipetizioni())
 print (GalileoGalilei.disposizioni(5))
