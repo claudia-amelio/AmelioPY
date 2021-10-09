@@ -39,7 +39,7 @@ class calcComb:
         if k<=n:
             while k>1:
                     fact = 1
-                    for num in range(2, k, n + 1,):
+                    for num in range(k, n + 1,):
                             fact *= num
                     return fact
 
