@@ -1,5 +1,11 @@
 #impostando il programma
 #costruzione classe
+def factorial(n):
+    fact = 1
+    for num in range(2, n + 1):
+            fact *= num
+    return fact
+
 class calcComb:
 
     def __init__(self,stringa): #definisco una funziona
@@ -21,18 +27,22 @@ class calcComb:
     def permutazioni(self, k):      #metodo che fa pare della calcomb
         return len(self.__stringa)**k #k è il valore dei posti della combinazione
 
+    def factorial(n):
+        fact = 1
+        for num in range(2, n + 1):
+            fact *= num
+        print(fact)
+
     def disposizioni(self,k,):
-        d=len(self.__stringa)
-        if k<d:
-            while k>1:
-                y=(d-k)
-                k=k-1
+        n=len(self.__stringa)
+        if k<n:
+            x=factorial(k)
                 
         else:
             print("k non può essere maggiore di n")
             return("errore")
 
-
+   
     
     #def eliminazioniRipetizioni(self):
         #for lettera in GalileoGalilei.getStringalist:
@@ -45,7 +55,8 @@ GalileoGalilei = calcComb("stringaDiRiferimento") #è un oggetto che si trova in
 GalileoGalilei.setStringa("lolfddfll")
 print(GalileoGalilei.permutazioni(5)) 
 #print(GalileoGalilei.eliminazioniRipetizioni())
-print (GalileoGalilei.disposizioni(5))
+print (GalileoGalilei.disposizioni(4))
+
 
 
 
