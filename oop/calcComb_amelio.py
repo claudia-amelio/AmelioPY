@@ -22,3 +22,30 @@ class calcComb: #costruzione classe
     def setStringa(self, str):      #sto cambiando la stringa
         self.__stringa = str
         self.stringalist = list(str)
+
+#metodi matematica
+
+    def disposizioniConRipetizioni(self, k):   #metodo che fa pare della calcomb
+        return len(self.__stringa)**k          #k è un gruppo di elementi combinati
+
+    def factorial(n):
+        fact = 1
+        for num in range(2, n + 1):
+            fact *= num
+        return fact
+
+    def disposizioniSemplici(self,k,):
+        n=len(self.__stringa)
+        if k<=n:
+            x=factorial(n)
+            y=factorial(n-k)
+            return (x/y)
+
+        else:
+            print("k non può essere maggiore di n")
+            return("errore")
+
+    def permutazioniSemplici(self):
+                n=len(self.__stringa)
+                return factorial(n)
+
