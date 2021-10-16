@@ -47,8 +47,16 @@ class calcComb: #costruzione classe
             return("errore")
 
     def permutazioniSemplici(self):
-                n=len(self.__stringa)
+                n = len(self.__stringa)
                 return factorial(n)
+
+    def permutazioniConRipetizione(self,n,k,h):
+        if k + h <= n:
+            a = factorial(n)
+            b = factorial(k)
+            c = factorial(h)
+            d = b*c
+            return (a/d)
 
     #def lettereMaiuscole(self):
      #   self.__stringa = upper(str)
@@ -57,10 +65,11 @@ class calcComb: #costruzione classe
 #CREAZIONE DELL'OGGETTO
 
 galileoGalilei = calcComb("stringaDiRiferimento") #è un oggetto che si trova in questa classe di oggetti)
-galileoGalilei.setStringa("astronomo")
+galileoGalilei.setStringa("matematico")
 
 print("la lista relativa alla stringa è:",galileoGalilei.getStringalist())
 print("la stringa è",galileoGalilei.getStringa())
 print("il numero di disposizioni con ripetizioni è:",galileoGalilei.disposizioniConRipetizioni(5)) 
 print ("il numero di disposizioni semplici è:",galileoGalilei.disposizioniSemplici(2))
 print ("il risultato della permutazione è:",galileoGalilei.permutazioniSemplici())
+print ("il risultato della permutazione è:",galileoGalilei.permutazioniConRipetizione(10,4,3))
